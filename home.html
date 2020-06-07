@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sri BalaJi Transport</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=9">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+    
+        body{
+            font-family: serif;
+            background-color: #273a47;
+        }
+        
+        .bg-logo{
+            width: 100%;
+            height: 680px;
+        }
+        .fa-truck-moving{
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: #273a47;
+            font-size:20px;
+        }
+        .fa-truck{
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: #273a47;
+            font-size:20px;
+        }
+        .fa-car-side{
+            padding-left: 25px;
+            color: #273a47;
+            font-size:20px;
+        }
+        .fa-truck-monster{
+            padding-left: 25px;
+            color: #273a47;
+            font-size:20px;
+        }
+        .fa-shuttle-van{
+            padding-left: 26px;
+            color: #273a47;
+            font-size:20px;
+        }
+        
+        th{
+            font-weight: 700;
+        }
+        
+        marquee{
+            height: 25px;
+            font-size: 14px;
+            background: rgba(39, 58, 71, 0.8);
+            color: white;
+            font-weight: 700;
+            font-family: 
+        }
+        .mrq{
+            padding-top: 4px;
+        }
+        
+        /*-----------------------------card styling below--------------------------------*/
+        
+        .card-price .truck-name{
+            padding-top: 25px;
+        }
+        .card-price .truck-type{
+            padding-top: 20px;
+        }
+        .card-price .mini-truck-name{
+            padding-top: 25px;
+        }
+        .card-price .mini-truck-type{
+            padding-top: 20px;
+        }
+        
+        .card{ background-color: #fff; border: 1px solid transparent; border-radius: 6px; }
+        .card > .card-link{ color: #333; }
+        .card > .card-link:hover{  text-decoration: none; }
+        .card > .card-link .card-img img{ border-radius: 6px 6px 0 0; }
+        .card .card-img{ position: relative; padding: 0; display: table; }
+        .card .card-img .card-caption{
+          position: absolute;
+          right: 0;
+          bottom: 16px;
+          left: 0;
+        }
+        .card .card-body{ display: table; width: 100%; padding: 12px; }
+        .card .card-header{ border-radius: 6px 6px 0 0; padding: 8px; }
+        .card .card-footer{ border-radius: 0 0 6px 6px; padding: 8px; }
+        .card .card-left{ position: relative; float: left; padding: 0 0 8px 0; }
+        .card .card-right{ position: relative; float: left; padding: 8px 0 0 0; }
+        .card .card-body h1:first-child,
+        .card .card-body h2:first-child,
+        .card .card-body h3:first-child, 
+        .card .card-body h4:first-child,
+        .card .card-body .h1,
+        .card .card-body .h2,
+        .card .card-body .h3, 
+        .card .card-body .h4{ margin-top: 0; }
+        .card .card-body .heading{ display: block;  }
+        .card .card-body .heading:last-child{ margin-bottom: 0; }
+
+        .card .card-body .lead{ text-align: center; }
+
+        @media( min-width: 768px ){
+          .card .card-left{ float: left; padding: 0 8px 0 0; }
+          .card .card-right{ float: left; padding: 0 0 0 8px; }
+
+          .card .card-4-8 .card-left{ width: 33.33333333%; }
+          .card .card-4-8 .card-right{ width: 66.66666667%; }
+
+          .card .card-5-7 .card-left{ width: 41.66666667%; }
+          .card .card-5-7 .card-right{ width: 58.33333333%; }
+
+          .card .card-6-6 .card-left{ width: 50%; }
+          .card .card-6-6 .card-right{ width: 50%; }
+
+          .card .card-7-5 .card-left{ width: 58.33333333%; }
+          .card .card-7-5 .card-right{ width: 41.66666667%; }
+
+          .card .card-8-4 .card-left{ width: 66.66666667%; }
+          .card .card-8-4 .card-right{ width: 33.33333333%; }
+        }
+
+        /* -- price theme ------ */
+        .cards{
+            margin-top: -281px; 
+        }
+        
+        .card-price{ border-color: #999; background-color: #ededed; margin-bottom: 24px; opacity: 0.6;}
+        .card-price:hover{ border-color: #999; background-color: #ededed; margin-bottom: 24px; margin-top: -20px; opacity: 1;}
+        .card-price > .card-heading,
+        .card-price > .card-footer{ color: #333; background-color: #fdfdfd; }
+        .card-price > .card-heading{ border-bottom: 1px solid #ddd; padding: 8px; }
+        .card-price > .card-footer{ border-top: 1px solid #ddd; padding: 8px; }
+        .card-price > .card-img:first-child img{ border-radius: 6px 6px 0 0; }
+        .card-price > .card-left{ padding-right: 4px; }
+        .card-price > .card-right{ padding-left: 4px; }
+        .card-price .card-caption { color: #fff; text-align: center; text-transform: uppercase; margin-top: -55px; margin-bottom: 10px;}
+        .card-price p:last-child{ margin-bottom: 0; }
+
+        .card-price .price{ 
+          text-align: center; 
+          color: #567c94;
+          font-size: 3em; 
+          text-transform: uppercase;
+          line-height: 0.7em; 
+          margin: 24px 0 16px;
+        }
+        .card-price .price small{ font-size: 0.4em; color: #66a5da; }
+        .card-price .details{ list-style: none; margin-bottom: 24px; padding: 0 18px; }
+        .card-price .details li{ text-align: center; margin-bottom: 8px; }
+        .card-price .buy-now{ text-transform: uppercase; background: rgba(39, 58, 71,0.5);}
+        .card-price .buy-now:hover{ text-transform: uppercase; background: rgba(39, 58, 71,1.0);}
+        .card-price table .price{ font-size: 1.2em; font-weight: 700; text-align: left; }
+        .card-price table .note{ color: #273a47; font-size: 1.0em; }
+        
+                
+    </style>
+    
+</head>
+<body>
+    
+    <img class="bg-logo" src="./images/home_page1.jpg" alt="logo" style="opacity: .9">
+
+<div class="container-fluid">
+
+    <div class="row cards">
+    <div class="col-sm-4"><!--
+    <div class="col d-flex justify-content-center">-->
+            <!--<div class="col d-flex justify-content-center">-->
+          <div class="card card-price">
+            <img class="img-responsive" src="images/truck.jpg" style="height: 280px; width: 100%;">
+              <div class="card-caption">
+                <span class="h2">Heavy Duty</span>
+                  <p style="font-size: 18px;"><b>Trucks</b></p>
+              </div>
+            <div class="card-body">
+                <div class="lead"><marquee behavior="scroll" direction="left"><p class="mrq">* हमारे साथ सफ़र करने वाले यात्रियों के लिए हमारी ओर से हरिद्वार का पवित्र गंगा जल *</p></marquee></div>
+                <ul class="details">
+                  <li>We have a variety of Heavy Duty (Container) Trucks.</li>
+                  <li>Suitable for all your transportation needs.</li>
+                  <li>Some of our Trucks are listed below.</li>
+                </ul>
+                <table class="table">
+                 <tr><th>OUR VEHICLES</th><th>NAME</th><th>TYPE</th></tr>
+                  <tr><td><i class="fa fa-truck-moving"></i></td><td class="price truck-name">Tata 1109</td><td class="note truck-type">Container Truck</td></tr>
+                  <tr><td><i class="fa fa-truck-moving"></i></td><td class="price truck-name">32 Feet Truck</td><td class="note truck-type">Container Truck</td></tr>
+                  <tr><td><i class="fa fa-truck-moving"></i></td><td class="price truck-name">10 Tyre Truck</td><td class="note truck-type">Container Truck</td></tr>
+                </table>
+                 <button type="button" class="btn btn-primary btn-lg btn-block buy-now" data-toggle="modal" data-target="#booking" data-whatever="Heavy-Truck">
+                  BOOK NOW<span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">   
+            
+            <div class="card card-price">
+            <img class="img-responsive" src="images/mini_truck.jpg" style="height: 280px; width: 100%;">
+              <div class="card-caption">
+                <span class="h2">Light Works</span>
+                <p style="font-size: 18px;"><b>Mini-Trucks</b></p>
+              </div>
+            <div class="card-body">
+                <div class="lead"><marquee behavior="scroll" direction="left"><p class="mrq">* हमारे साथ सफ़र करने वाले यात्रियों के लिए हमारी ओर से हरिद्वार का पवित्र गंगा जल *</p></marquee></div>
+                <ul class="details">
+                  <li>We have a variety of Mini (Pick-Up) Trucks.</li>
+                  <li>Suitable for all your goods carrying needs.</li>
+                  <li>Some of our Mini-Trucks are listed below.</li>
+                </ul>
+                <table class="table">
+                  <tr><th>OUR VEHICLES</th><th>NAME</th><th>TYPE</th></tr>
+                  <tr><td><i class="fa fa-truck"></i></td><td class="price mini-truck-name">Tata 407</td><td class="note mini-truck-type">Mini Truck</td></tr>
+                  <tr><td><i class="fa fa-truck"></i></td><td class="price mini-truck-name">Chota Hathi</td><td class="note mini-truck-type">Mini Truck</td></tr>
+                  <tr><td><i class="fa fa-truck"></i></td><td class="price mini-truck-name">Pick Up</td><td class="note mini-truck-type">PickUp Truck</td></tr>
+                </table>
+                 <button type="button" class="btn btn-primary btn-lg btn-block buy-now" data-toggle="modal" data-target="#booking" data-whatever="Mini-Truck">
+                  BOOK NOW<span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+              </div>
+          </div>
+            
+        </div>
+        <div class="col-sm-4">
+            
+            <div class="card card-price">
+            <img class="img-responsive" src="images/road_trip.jpg" style="height: 280px; width: 100%;">
+              <div class="card-caption">
+                <span class="h2">Road Trips</span>
+                <p style="font-size: 18px;"><b>Cars</b></p>
+              </div>
+            <div class="card-body">
+                <div class="lead"><marquee behavior="scroll" direction="left"><p class="mrq">* हमारे साथ सफ़र करने वाले यात्रियों के लिए हमारी ओर से हरिद्वार का पवित्र गंगा जल *</p></marquee></div>
+                <ul class="details">
+                  <li>We have a variety of Hatchbacks/ Sedans/ MUV/ SUV/ Travellers.</li>
+                  <li>Suitable for all your road trips/ family trips/ Group trips.</li>
+                  <li>Some of our Trip Vehicles are listed below.</li>
+                </ul>
+                <table class="table">
+                  <tr><th>OUR VEHICLES</th><th>NAME</th><th>TYPE</th></tr>
+                  <tr><td><i class="fas fa-car-side"></i></td><td class="price">Maruti Suzuki Swift</td><td class="note">Sedan</td></tr>
+                  <tr><td><i class="fas fa-car-side"></i></td><td class="price">Toyota Innova</td><td class="note">MUV</td></tr>
+                  <tr><td><i class="fas fa-truck-monster"></i></td><td class="price">Mahindra Bolero</td><td class="note">SUV</td></tr>
+                  <tr><td><i class="fas fa-shuttle-van"></i></td><td class="price">Traveller (11 Seater)</td><td class="note">Mini Bus</td></tr>
+                  <tr><td><i class="fas fa-shuttle-van"></i></td><td class="price">Mini Bus</td><td class="note">Mini Bus</td></tr>
+                </table>
+                <button type="button" class="btn btn-primary btn-lg btn-block buy-now" data-toggle="modal" data-target="#booking" data-whatever="Road-Trip">
+                  BOOK NOW<span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+              </div>
+          </div>
+            
+        </div>
+                    
+    </div>
+    
+    <div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">New Booking</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="customer-name" class="col-form-label">Vehicle:</label>
+            <input type="text" class="form-control" id="vehicle" onkeypress="return ((event.charCode != 8 && event.charCode == 0) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode==32))" placeholder="Vehicle Name / Type" maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="customer-name" class="col-form-label">Customer Name:</label>
+            <input type="text" class="form-control" id="customer-name" onkeypress="return ((event.charCode != 8 && event.charCode == 0) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode==32))" placeholder="Full Name" maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="contact" class="col-form-label">Contact Number:</label>
+            <input type="text" class="form-control" id="contact" onkeypress="return ((event.charCode != 8 && event.charCode == 0) || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Mobile" maxlength="11">
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-form-label">Complete Address:</label>
+              <textarea class="form-control" id="address" onkeypress="return ((event.charCode != 8 && event.charCode == 0) || (event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode==32 || event.charCode==45))" placeholder="Address"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Confirm Booking</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+</div>
+    
+    <script>
+        $('#booking').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('whatever') // Extract info from data-* attributes
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this)
+          modal.find('.modal-title').text('New Booking For ' + recipient)
+          /*modal.find('.modal-body input').val(recipient)*/
+        })
+    </script>
+</body>
+</html>
