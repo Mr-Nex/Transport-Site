@@ -1,0 +1,13 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<a href="https://google.com" target="_blank" class="button">Visit</a> 
+
+<br /><br /> 
+
+<button onclick="location.href='https://google.com'" type="button">Visit</button>
+
+ 
+</body> 
+</html>
